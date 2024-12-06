@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dptaahg57lxk"]
+
+[ext_resource type="Script" path="res://Scripts/example_sword.gd" id="1_6nk20"]
+[ext_resource type="PackedScene" uid="uid://c3556x5fqosw5" path="res://Scenes/Components/weapon_component.tscn" id="2_sfhvp"]
+[ext_resource type="Texture2D" uid="uid://bp1qrhhey5dxu" path="res://Assets/icon.svg" id="3_07nyt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufgo3"]
+size = Vector2(24, 2)
+
+[node name="ExampleSword" type="Node2D"]
+script = ExtResource("1_6nk20")
+
+[node name="WeaponComponent" parent="." instance=ExtResource("2_sfhvp")]
+attack_damage = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(0.1875, 0.0117187)
+texture = ExtResource("3_07nyt")
+
+[node name="ExampleSwordHitbox" type="Area2D" parent="."]
+
+[node name="WeaponCollider" type="CollisionShape2D" parent="ExampleSwordHitbox"]
+shape = SubResource("RectangleShape2D_ufgo3")
+
+[connection signal="area_entered" from="ExampleSwordHitbox" to="." method="_on_example_sword_hitbox_area_entered"]
