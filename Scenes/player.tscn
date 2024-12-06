@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bayc1ctn8se3g" path="res://Scenes/Components/health_component.tscn" id="1_pghom"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_wmbmx"]
-[ext_resource type="Texture2D" uid="uid://bp1qrhhey5dxu" path="res://icon.svg" id="2_7cqbc"]
-[ext_resource type="PackedScene" uid="uid://c3556x5fqosw5" path="res://Scenes/sword.tscn" id="4_qwgjy"]
+[ext_resource type="Texture2D" uid="uid://bp1qrhhey5dxu" path="res://Assets/icon.svg" id="2_7cqbc"]
+[ext_resource type="PackedScene" uid="uid://dptaahg57lxk" path="res://Scenes/starting_sword.tscn" id="5_d2vk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqe6i"]
 size = Vector2(80, 80)
@@ -21,6 +21,5 @@ texture = ExtResource("2_7cqbc")
 scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_cqe6i")
 
-[node name="Sword" parent="." instance=ExtResource("4_qwgjy")]
-position = Vector2(-14, 0)
-scale = Vector2(0.25, 0.25)
+[node name="BaseSword" parent="." instance=ExtResource("5_d2vk7")]
+position = Vector2(-11, 5)

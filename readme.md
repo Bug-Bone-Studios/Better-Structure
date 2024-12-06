@@ -1,4 +1,4 @@
-# 🌟 ** Better Structure Project Template ** 🌟
+# 🌟 Better Structure Project Template 🌟
 
 Welcome to my **Better Structure**! This is the initial attempt at setting up a **solid code structure** that I will refine and expand over time. The goal is to create a project that is both flexible and scalable, ready to implement new features and templates as the development process continues.
 
@@ -68,3 +68,5 @@ I believe in **iterative development**, so as new concepts emerge, I’ll revisi
 If you’re working on a similar project or have any feedback, feel free to reach out! I’d love to discuss ideas and improvements.
 
 Thanks for checking out my project. Stay tuned for updates! 🚀
+
+BIG Shoutouts to [Bitlytic](https://www.youtube.com/@Bitlytic) and [PirateSoftware](https://www.youtube.com/@PirateSoftware)
