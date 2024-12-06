@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://breu1pq7w4xxx"]
+
+[ext_resource type="PackedScene" uid="uid://bayc1ctn8se3g" path="res://Scenes/Components/health_component.tscn" id="1_pghom"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_wmbmx"]
+[ext_resource type="Texture2D" uid="uid://bp1qrhhey5dxu" path="res://icon.svg" id="2_7cqbc"]
+[ext_resource type="PackedScene" uid="uid://c3556x5fqosw5" path="res://Scenes/sword.tscn" id="4_qwgjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqe6i"]
+size = Vector2(80, 80)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_wmbmx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.164062, 0.164062)
+texture = ExtResource("2_7cqbc")
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_pghom")]
+
+[node name="PlayerCollider" type="CollisionShape2D" parent="."]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_cqe6i")
+
+[node name="Sword" parent="." instance=ExtResource("4_qwgjy")]
+position = Vector2(-14, 0)
+scale = Vector2(0.25, 0.25)
